@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface ClienteService {
+    
     List<ClienteDTO> getAllClientes();
 
     ClienteDTO getClienteById(Long id); // Cambiar retorno

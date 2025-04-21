@@ -78,7 +78,7 @@ public class AuthController {
         String email = userDetails.getUsername();
         Usuario usuario = usuarioRepository.findByEmail(email)
                 .orElseThrow(() -> new ApiException("Usuario no encontrado"));
-
+                
         if (request.getNombre() != null && !request.getNombre().isBlank()) {
             usuario.setNombre(request.getNombre());
         }
