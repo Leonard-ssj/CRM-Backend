@@ -129,7 +129,7 @@ public class AuthServiceImpl implements AuthService {
         Usuario usuario = usuarioRepository.findByEmail(email)
                 .orElseThrow(() -> new ApiException("Usuario no encontrado"));
 
-        // ✅ Generar nuevos tokens si el refreshToken es válido
+        // Generar nuevos tokens si el refreshToken es válido
         String newAccessToken = jwtUtil.generateToken(usuario.getEmail(),
                 (int) jwtUtil.getJwtExpirationMs() / (60 * 1000));
 

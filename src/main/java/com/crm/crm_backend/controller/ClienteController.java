@@ -30,7 +30,6 @@ public class ClienteController {
 
     @PostMapping
     public ClienteDTO createCliente(@RequestBody ClienteDTO clienteDTO) {
-        // ❌ Eliminamos creadoPor por ahora
         return clienteService.createCliente(clienteDTO);
     }
 

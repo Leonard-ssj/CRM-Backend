@@ -56,7 +56,7 @@ public class TareaServiceImpl implements TareaService {
 
         tarea.setEstado(EstadoTarea.valueOf(tareaDTO.getEstado().toUpperCase()));
 
-        // ✅ ACTUALIZA EL USUARIO ASIGNADO
+        // ACTUALIZA EL USUARIO ASIGNADO
         Usuario nuevoAsignado = usuarioService.getUsuarioById(tareaDTO.getAsignadoA());
         tarea.setAsignadoA(nuevoAsignado);
 

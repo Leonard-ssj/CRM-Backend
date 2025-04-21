@@ -19,7 +19,7 @@ public class TareaUsuarioController {
 
     @GetMapping("/asignadas")
     public List<TareaDTO> getTareasAsignadasAlUsuario() {
-        Usuario usuario = usuarioService.getUsuarioActual(); // ✅ Ya funciona
+        Usuario usuario = usuarioService.getUsuarioActual(); // Ya funciona
         return tareaService.getTareasAsignadasAUsuario(usuario);
     }
 

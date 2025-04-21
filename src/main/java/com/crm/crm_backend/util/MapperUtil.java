@@ -16,7 +16,7 @@ public class MapperUtil {
                 .telefono(cliente.getTelefono())
                 .empresa(cliente.getEmpresa())
                 .ubicacion(cliente.getUbicacion())
-                // ✅ Prevenir null en fechaCreacion
+                // Prevenir null en fechaCreacion
                 .fechaCreacion(cliente.getFechaCreacion() != null ? cliente.getFechaCreacion().toString() : null)
                 .build();
         // Eliminamos creadoPor del mapeo
@@ -79,7 +79,7 @@ public class MapperUtil {
         tarea.setDescripcion(dto.getDescripcion());
         tarea.setEstado(mapEstadoTarea(dto.getEstado()));
 
-        // ✅ Asegurar que fecha y hora se combinen correctamente
+        // Asegurar que fecha y hora se combinen correctamente
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss");
         String fechaConHora = dto.getFechaLimite().contains("T")
                 ? dto.getFechaLimite()

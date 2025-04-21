@@ -14,7 +14,7 @@ public interface ContactoService {
 
     void deleteContacto(Long id);
 
-    List<ContactoDTO> getAllContactos(); // ✅ nuevo método
+    List<ContactoDTO> getAllContactos(); // nuevo método
 
     ContactoDTO getContactoById(Long id);
 

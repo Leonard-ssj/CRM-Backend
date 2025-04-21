@@ -52,7 +52,7 @@ public class SeguimientoServiceImpl implements SeguimientoService {
 
         seguimiento.setComentarios(seguimientoDTO.getComentarios());
 
-        // ✅ ACTUALIZAR USUARIO RESPONSABLE
+        // ACTUALIZAR USUARIO RESPONSABLE
         Usuario nuevoUsuario = usuarioService.getUsuarioById(seguimientoDTO.getUsuarioId());
         seguimiento.setUsuario(nuevoUsuario);
 

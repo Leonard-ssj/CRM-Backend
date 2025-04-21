@@ -30,7 +30,7 @@ public class JwtUtil {
         return Jwts.builder()
                 .setSubject(email)
                 .setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis() + (long) minutes * 60 * 1000)) // ✅ Conversion
+                .setExpiration(new Date(System.currentTimeMillis() + (long) minutes * 60 * 1000)) // Conversion
                                                                                                   // correcta
                 .signWith(getSigningKey(), SignatureAlgorithm.HS256)
                 .compact();

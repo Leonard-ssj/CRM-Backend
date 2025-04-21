@@ -31,14 +31,14 @@ public class ClienteServiceImpl implements ClienteService {
     public ClienteDTO getClienteById(Long id) {
         Cliente cliente = clienteRepository.findById(id)
                 .orElseThrow(() -> new ApiException("Cliente no encontrado"));
-        return MapperUtil.toClienteDTO(cliente); // ✅ Corregido
+        return MapperUtil.toClienteDTO(cliente); // Corregido
     }
 
     @Override
     public ClienteDTO createCliente(ClienteDTO clienteDTO) {
         Cliente cliente = MapperUtil.toClienteEntity(clienteDTO);
 
-        // ✅ Asignar la fecha de creación automáticamente
+        // Asignar la fecha de creación automáticamente
         if (cliente.getFechaCreacion() == null) {
             cliente.setFechaCreacion(LocalDateTime.now());
         }
