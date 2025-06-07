@@ -25,13 +25,11 @@ public class JwtUtil {
     }
 
     // Generar token JWT con tiempo de expiración variable
-    // Generar token JWT con tiempo de expiración variable
     public String generateToken(String email, int minutes) {
         return Jwts.builder()
                 .setSubject(email)
                 .setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis() + (long) minutes * 60 * 1000)) // Conversion
-                                                                                                  // correcta
+                .setExpiration(new Date(System.currentTimeMillis() + (long) minutes * 60 * 1000)) // Conversión correcta
                 .signWith(getSigningKey(), SignatureAlgorithm.HS256)
                 .compact();
     }
