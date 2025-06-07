@@ -94,7 +94,7 @@ public class AuthController {
         return ResponseEntity.ok(usuario);
     }
 
-    // actualizar contraseña del usuario logeado
+    // actualizar contraseña del usuario logueado
     @PutMapping("/me/password")
     public ResponseEntity<?> updatePassword(@RequestBody UpdatePasswordDTO dto,
             @AuthenticationPrincipal UserDetails userDetails) {
